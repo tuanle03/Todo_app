@@ -1,0 +1,20 @@
+= form_with(model: todo, local: true) do |form|
+  - if todo.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(todo.errors.count, "error")
+        prohibited this todo from being saved:
+      %ul
+        - todo.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :title
+    = form.text_field :title
+  .field
+    = form.label :notes
+    = form.text_area :notes
+  .field
+    = form.label :status
+    = form.check_box :status
+  .actions
+    = form.submit

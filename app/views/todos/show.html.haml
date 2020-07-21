@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %strong Title:
+  = @todo.title
+%p
+  %strong Notes:
+  = @todo.notes
+%p
+  %strong Status:
+  - if @todo.status
+    %td Done
+  - else
+    %td Doing
+= link_to 'Edit', edit_todo_path(@todo)
+|
+= link_to 'Back', todos_path
