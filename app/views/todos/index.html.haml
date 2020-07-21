@@ -1,6 +1,6 @@
 %p#notice= notice
 %h1 Todos
-%table
+%table.table
   %thead
     %tr
       %th Title
@@ -17,8 +17,8 @@
         - else
           %td= link_to 'Doing', toggle_path(todo), method: :put
 
-        %td= link_to 'Show', todo
-        %td= link_to 'Edit', edit_todo_path(todo)
-        %td= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to 'Show', todo, class: 'btn btn-outline-secondary btn-sm'
+        %td= link_to 'Edit', edit_todo_path(todo), class: 'btn btn-outline-secondary btn-sm'
+        %td= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-secondary btn-sm'
 %br/
-= link_to 'New Todo', new_todo_path
+= link_to 'New Todo', new_todo_path, class: 'btn btn-info' 
