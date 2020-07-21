@@ -1,3 +1,3 @@
 class Todo < ApplicationRecord
-  validates :title,:notes, presence: true
+  validates :title, :notes, presence: true
 end
