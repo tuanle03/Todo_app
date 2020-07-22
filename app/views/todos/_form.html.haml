@@ -8,13 +8,13 @@
         - todo.errors.full_messages.each do |message|
           %li= message
   .field
-    = form.label :title
+    %h5= form.label :title
     = form.text_field :title
   .field
-    = form.label :notes
+    %h5= form.label :notes
     = form.text_area :notes
   .field
-    = form.label :status
+    %h5= form.label :status
     = form.check_box :status
   .actions
     = form.submit
