@@ -5,6 +5,7 @@
     %tr
       %th Title
       %th Notes
+      %th Tags
       %th Status
       %th{:colspan => "3"}
   %tbody
@@ -12,6 +13,9 @@
       %tr
         %td= todo.title
         %td= todo.notes
+        %td
+          - todo.tags.each do |tag|
+            = tag.name
         - if todo.status
           %td= link_to 'Done', toggle_path(todo), method: :put, class: 'text-success'
         - else
