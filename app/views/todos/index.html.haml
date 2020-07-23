@@ -13,9 +13,9 @@
         %td= todo.title
         %td= todo.notes
         - if todo.status
-          %td= link_to 'Done', toggle_path(todo), method: :put
+          %td= link_to 'Done', toggle_path(todo), method: :put, class: 'text-success'
         - else
-          %td= link_to 'Doing', toggle_path(todo), method: :put
+          %td= link_to 'Doing', toggle_path(todo), method: :put, class: 'text-danger'
 
         %td= link_to 'Show', todo, class: 'btn btn-outline-secondary btn-sm'
         %td= link_to 'Edit', edit_todo_path(todo), class: 'btn btn-outline-secondary btn-sm'
