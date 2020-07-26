@@ -74,9 +74,8 @@ class TodosController < ApplicationController
     def set_todo
       @todo = Todo.find(params[:id])
     end
-
     # Only allow a list of trusted parameters through.
     def todo_params
-      params.require(:todo).permit(:title, :notes, :status)
+      params.require(:todo).permit(:title, :notes, :status, tag_ids: [])
     end
 end

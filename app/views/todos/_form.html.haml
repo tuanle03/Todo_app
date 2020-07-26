@@ -16,5 +16,8 @@
   .field
     %h5= form.label :status
     = form.check_box :status
+  .field
+    %h5= form.label :tags
+    = form.collection_select :tag_ids, Tag.all, :id, :name, {}, {multiple: true}
   .actions
     = form.submit nil, :class => 'btn btn-primary btn-sm'
