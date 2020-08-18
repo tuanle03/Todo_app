@@ -1,21 +1,22 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'form-signin'}) do |f|
+  %img.mb-4{:alt => "", :height => "72", :src => "../assets/brand/bootstrap-solid.svg", :width => "72"}/
+  %h1.h3.mb-3.font-weight-normal Sign up
+  %label Email
+  %label.sr-only{:for => "inputEmail"} Email address
+  %input#inputEmail.form-control{type: :email, placeholder: "Email address", required: "",name: 'user[email]'}
+  
+  %label Password
+  %em (6 characters minimum)
+  %label.sr-only{:for => "inputPassword"} Password
+  %input#inputPassword.form-control{type: :password, placeholder: "Password", required: "",name: "user[password]"}/
+  
+  %label Password confirmation 
+  %label.sr-only{:for => "inputPassword"} Password
+  %input#inputPassword.form-control{type: :password, placeholder: "Password confirmation", required: "",name: "user[password_confirmation]"}   
+
+  .checkbox.mb-3
+    %label
+      %input{:type => "checkbox", :value => "remember-me"}/
+      Remember me
+  %button.btn.btn-lg.btn-primary.btn-block{:type => "submit"} Sign up
+  %p.mt-5.mb-3.text-muted © 2017-2020
