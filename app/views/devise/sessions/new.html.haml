@@ -5,5 +5,6 @@
   %input#inputEmail.form-control{:autofocus => "", :placeholder => "Email address", :required => "", :type => "email", :name => "user[email]"}/
   %label.sr-only{:for => "inputPassword"} Password
   %input#inputPassword.form-control{placeholder: "Password", required: "", type: :password, name: "user[password]"}/
-  %button.btn.btn-lg.btn-primary.btn-block{:type => "submit"} Sign in
+  %button.btn.btn-lg.btn-primary.btn-147px{:type => "submit"} Sign in
+  = link_to 'Sign up', new_user_registration_path, class: "btn btn-lg btn-light btn-147px"
   %p.mt-5.mb-3.text-muted © 2017-2020

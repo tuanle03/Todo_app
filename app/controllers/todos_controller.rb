@@ -1,10 +1,12 @@
 class TodosController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_todo, only: [:show, :edit, :update, :destroy, :toggle]
 
   # GET /todos
   # GET /todos.json
   def index
-    @todos = Todo.all
+    # @todos = Todo.where(user: current_user)
+    @todos = current_user.todos
   end
 
   # GET /todos/1
@@ -24,7 +26,10 @@ class TodosController < ApplicationController
   # POST /todos
   # POST /todos.json
   def create
-    @todo = Todo.new(todo_params)
+    # @todo = Todo.new(todo_params)
+
+    # @todo.user_id = current_user.id
+    @todo = current_user.todos.new(todo_params)
 
     respond_to do |format|
       if @todo.save

@@ -2,7 +2,7 @@ class TagsController < ApplicationController
   before_action :find_tag, only: [:edit, :update, :destroy]
  
   def index
-    @tags = Tag.all
+    @tags = current_user.tags
   end
 
   def new
@@ -10,7 +10,7 @@ class TagsController < ApplicationController
   end
 
   def create
-    @tag = Tag.new(tag_params)
+    @tag = current_user.tags.new(tag_params)
     if @tag.save
       redirect_to tags_path
     else
