@@ -1,3 +1,5 @@
+- mytags = current_user.tags
+
 = form_with(model: todo, local: true) do |form|
   - if todo.errors.any?
     #error_explanation
@@ -18,6 +20,6 @@
     = form.check_box :status
   .field
     %h5= form.label :tags
-    = form.collection_select :tag_ids, Tag.all, :id, :name, {}, {multiple: true}
+    = form.collection_select :tag_ids, mytags, :id, :name, {}, {multiple: true}
   .actions
     = form.submit nil, :class => 'btn btn-primary btn-sm'
