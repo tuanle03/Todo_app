@@ -47,5 +47,27 @@ Visit `http://localhost:3000` in your browser to view the application.
 - Bootstrap - Framework CSS
 - Haml/JS/CSS - Frontend
 
+## Contributing
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+1. Fork the Project
+2. Create your Feature Branch 
+```md 
+git checkout -b [branch name]
+```
+3. Add your file changes 
+```md 
+git add [file change]
+```
+4. Commit your Changes 
+```md 
+git commit -m "message"
+```
+5. Push to the Branch 
+```md
+git push --set-upstream origin $(git_current_branch)
+```
+6. Open a Pull Request
+
 ## Author
 ### Tuan Le
