@@ -13,7 +13,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 You will need to have the following software installed on your machine:
 
-- Ruby version 2.6.6 or higher
+- Ruby version 2.6.3 or higher
 - Rails version 6.0.3.2 or higher
 - SQLite3 database
 
