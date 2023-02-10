@@ -1,25 +1,51 @@
-# README
+# Todo App
+Todo App is a simple todo list application built using Ruby on Rails. It allows users to create, read, update, and delete their todo items.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Features
+- Create new todo items
+- View a list of all todo items
+- Edit existing todo items
+- Mark todo items as complete
+- Delete todo items
+## Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Things you may want to cover:
+### Prerequisites
+You will need to have the following software installed on your machine:
 
-* Ruby version
+- Ruby version 2.6.6 or higher
+- Rails version 6.0.3.2 or higher
+- SQLite3 database
 
-* System dependencies
+### Installing
+1. Clone the repository:
+```md
+git clone https://github.com/tuanle03/Todo_app.git
+```
+2. Change into the directory
+```md
+cd Todo_app
+```
+3. Install the gems
+```md
+bundle install
+```
+4. Set up the database
+```md
+rails db:create
+rails db:migrate
+```
+5. Start the server
+```md
+rails server
+```
+Visit `http://localhost:3000` in your browser to view the application.
 
-* Configuration
+## Built With
+- Ruby on Rails - Backend
+- SQLite3 - Database
+- Bootstrap - Framework CSS
+- Haml/JS/CSS - Frontend
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# CPP
+## Author
+### Tuan Le
