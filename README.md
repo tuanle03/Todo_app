@@ -53,7 +53,7 @@ Contributions are what make the open source community such an amazing place to l
 1. Fork the Project
 2. Create your Feature Branch 
 ```md 
-git checkout -b [branch name]
+gco -b [branch name]
 ```
 3. Add your file changes 
 ```md 
