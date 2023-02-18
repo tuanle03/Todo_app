@@ -57,11 +57,11 @@ gco -b [branch name]
 ```
 3. Add your file changes 
 ```md 
-git add [file change]
+ga [file change]
 ```
 4. Commit your Changes 
 ```md 
-git commit -m "message"
+gc -m "message"
 ```
 5. Push to the Branch 
 ```md
