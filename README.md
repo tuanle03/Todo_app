@@ -65,7 +65,7 @@ gc -m "message"
 ```
 5. Push to the Branch 
 ```md
-git push --set-upstream origin $(git_current_branch)
+gpsup origin $(git_current_branch)
 ```
 6. Open a Pull Request
 
