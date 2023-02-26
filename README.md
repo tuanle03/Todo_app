@@ -37,7 +37,7 @@ rails db:migrate
 ```
 5. Start the server
 ```md
-rails server
+rails s
 ```
 Visit `http://localhost:3000` in your browser to view the application.
 
