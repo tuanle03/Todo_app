@@ -65,7 +65,7 @@ gc -m "message"
 ```
 5. Push to the Branch 
 ```md
-gpsup origin $(git_current_branch)
+gpsup
 ```
 6. Open a Pull Request
 
